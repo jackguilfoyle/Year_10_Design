@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Track the Station</title>
+	    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+  		<script src="http://api.open-notify.org/iss-now.json"></script>
+	    <link rel="stylesheet" type="text/css" href="style.css" />
+	    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+</head>
+<body>
+	<div>
+	<h1>Track the Station</h1>
+	<p>Enter the time and date when you would like to know where the ISS is going to be.</p>
+	</div>
+<!--
+	<div>
+		<form action="process.php" method="POST">
+					<div>
+						<label>Date</label>
+		  				<input type="date" name="Date">
+					</div>
+					<br>
+		</form>
+-->
+	</div>
+	<div>
+		<label>Time</label>
+		  	<input type="time" name="Time">
+		  <br>
+		  <br>
+	  	<input type="submit" name="submit" value="Calculate">
+	</div>
+
+	<br>
+
+	<div>
+		<h3>Display Options</h3>
+
+		Latitude: <input type="checkbox" id="Latitude" onclick="laFunction()">
+		<br>
+
+		Longitude: <input type="checkbox" id="Longitude" onclick="loFunction()">
+		<br>
+
+		Altitude: <input type="checkbox" id="Altitude" onclick="alFunction()">
+		<br>
+
+		Orbital Speed: <input type="checkbox" id="Velocity" onclick="vFunction()">
+		<br>
+
+		Current Time: <input type="checkbox" id="Time" onclick="tFunction()">
+		<br>
+<!--
+		<label>Unit</label>
+	  		<select name="Unit">
+	  			<option value="Metric">Metric</option>
+	  			<option value="Imperal">Imperal</option>
+	  		</select>
+	  	<br><br>
+-->
+  	
+  	</div>
+
+	<br>
+
+	<div>
+		<h3>Quick Facts</h3>
+		<p id="la" style='display:none'></p>
+		
+		<p id='lo' style='display:none'></p>
+
+		<p id='al' style='display:none'></p>
+
+		<p id='v' style='display:none'></p>
+
+		<p id="t" style='display:none'></p>
+	</div>
+	<br>
+
+	<br>
+
+	<button onclick="myFunction()">Reload</button>
+
+  	<br>
+	
+	<div id="mapid"></div>	
+
+	<script src="script.js"></script>
+
+</body>
+</html>
+

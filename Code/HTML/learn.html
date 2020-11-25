@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learn HTML</title>
+	</head>
+	<body>
+
+	<a href="blog.html">Go to blog</a>
+		<!-- Headings -->
+		<H1>Heading One</H1>
+		<H2>Headine Two</H2>
+		<H3>Heading Three</H3>
+		<H4>Heading Four</H4>
+		<H5>Heeading Five</H5>
+		<H5>Heading Six</H5>
+
+		<!--
+			Paragraphs 
+			- <strong> means bold 
+			- <em> means italic, 
+			- <a href=""></a> means link in same tab
+			- <a href="" target= "_blank"></a> opens link in a new tab
+		-->
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu augue et purus rhoncus ultrices et vel nunc. Praesent at metus pretium, porttitor nulla auctor, porta nulla. Aliquam semper dignissim velit at sagittis. <strong> Aenean congue mauris a velit vulputate efficitur a at dui.</strong> Nullam vulputate, ex vitae elementum lacinia, sem justo vehicula nunc, sit amet consectetur urna velit volutpat purus. <em> Nam venenatis lectus et tortor hendrerit aliquam. Donec commodo, libero ac elementum venenatis, lorem nulla interdum justo, blandit hendrerit est lacus aliquam tellus.</em> Donec eu libero vitae felis viverra pulvinar a et ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu augue et purus rhoncus ultrices et vel nunc. Praesent at metus pretium, porttitor nulla auctor, porta nulla. Aliquam semper dignissim velit at sagittis. <a href="http://google.com" target= "_blank">Aenean congue mauris a velit vulputate efficitur a at dui.</a> Nullam vulputate, ex vitae elementum lacinia, sem justo vehicula nunc, sit amet consectetur urna velit volutpat purus. Nam venenatis lectus et tortor hendrerit aliquam. Donec commodo, libero ac elementum venenatis, lorem nulla interdum justo, blandit hendrerit est lacus aliquam tellus. Donec eu libero vitae felis viverra pulvinar a et ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+		</p>
+
+		<!-- 
+			Lists 
+			<ul> Unorderd list (Bullet points)
+			<ol> Orderd list (Numbers)
+		-->
+		<ul>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ul>
+
+		<ol>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ol>
+
+		<!--
+			Tables
+		--> 
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				 <tr>
+				 	<td>Tom Lowe</td>
+				 	<td>Tom@google.com</td>
+				 	<td>17</td>
+				 </tr>
+				 <tr>
+				 	<td>Jack Guilfoyle</td>
+				 	<td>Jack@google.com</td>
+				 	<td>15</td>
+				 </tr>
+				 <tr>
+				 	<td>Sarah Williams</td>
+				 	<td>Sarah@google.com</td>
+				 	<td>32</td>
+				 </tr>
+			</tbody>
+		</table>
+		
+		<br>
+		<hr>
+		<br>
+
+		<!-- Forms -->
+		<form action="process.php" method="POST">
+			<div>
+				<label>First name</label>
+  				<input type="text" name="firstName">
+			</div>
+			<br>
+			<div>
+  				<label>Last name</label>
+  				<input type="text" name="lastName">
+  			</div>
+  			<br>
+			<div>
+  				<label>Email</label>
+  				<input type="Email" name="email">
+  			</div>
+  			<br>
+  			<div>
+  				<label>Message</label>
+  				<textarea name="message" placeholder="Type your message here"></textarea>
+  			</div>
+  			<br>
+  			<div>
+  				<label>Gender</label>
+  				<select name="Gender">
+  					<option value="male">Male</option>
+  					<option value="female">Female</option>
+  					<option value="other">Other</option>
+  				</select>
+  			</div>
+  			<br>
+  			<div>
+  				<label>Age</label>
+  				<input type="number" name="age" value="30">
+  			</div>
+  			<br>
+  			<div>
+  				<label>Birthday</label>
+  				<input type="date" name="birthday">
+  			</div>
+  			<br>
+  			<input type="submit" name="submit" value="Submit">
+		</form>
+		<br>
+
+
+		<!-- Button-->
+		<button>Click Me</button>
+
+		<br>
+		<br>
+		
+		<!-- Image-->
+		<a href="sample.jpg" target= "_blank">
+			<img src="sample.jpg" alt="My Sample image" width="200" height ="200">
+		</a>
+
+		<!-- Quotations -->
+		<blockquote cite="http://google.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu augue et purus rhoncus ultrices et vel nunc.</blockquote>
+
+		<p> The <abbr title="World Wide Web">WWW</abbr> is awesome</p>
+
+		<p><cite>Learn to code in HTML</cite> by Jack Guilfoyle</p>
+
+		<div style="margin-top: 500px"></div>
+	</body>
+</html>
