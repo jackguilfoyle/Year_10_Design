@@ -4,15 +4,15 @@ fetch('https://api.wheretheiss.at/v1/satellites/25544')
   })
   .then((data) => {
 
-    let latitude = data.latitude
+    let latitude2 = data.latitude
     let longitude = data.longitude 
     let velocity = data.velocity
     let altitude = data.altitude
     let time = data.timestamp
 
-    console.log(data)
+    //console.log(data)
 
-    document.getElementById("la").innerHTML = 'Latitude: ' + latitude;
+    //document.getElementById("la").innerHTML = 'Latitude: ' + latitude;
     document.getElementById("lo").innerHTML = 'Longitude: ' + longitude;
     document.getElementById("v").innerHTML = 'Velocity: ' + velocity + ' Km/h';
     document.getElementById("al").innerHTML = 'Altitude: ' + altitude + ' Km';
@@ -20,7 +20,7 @@ fetch('https://api.wheretheiss.at/v1/satellites/25544')
     var d = new Date(time * 1000);
       document.getElementById("t").innerHTML = 'Time: ' + d;
 
-    var mymap = L.map('mapid').setView([latitude, longitude], 5);
+    var mymap = L.map('mapid').setView([latitude2, longitude], 5);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -33,7 +33,7 @@ fetch('https://api.wheretheiss.at/v1/satellites/25544')
     }).addTo(mymap);
 
 
-	var marker = L.marker([latitude, longitude]).addTo(mymap);
+	var marker = L.marker([latitude2, longitude]).addTo(mymap);
 		marker.bindPopup("<b>ISS Location</b>").openPopup();
 })
 
@@ -100,3 +100,25 @@ function tFunction() {
     t.style.display = "none";
   }
 }
+
+var info = function () {
+    var tmp = null;
+    $.ajax({
+        'async': false,
+        'type': "Get",
+        'global': false,
+        'dataType': 'html',
+        'url': "https://api.wheretheiss.at/v1/satellites/25544",
+        'data': { 'request': "", 'target': 'arrange_url', 'method': 'method_target' },
+        'success': function (data) {
+            tmp = data;
+        }
+    });
+    return tmp;
+}();
+
+let latitude = info.latitude
+console.log(info)
+
+
+

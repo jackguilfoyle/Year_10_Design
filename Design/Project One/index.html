@@ -10,12 +10,12 @@
 	    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
-
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div>
 	<h1>Track the Station</h1>
-	<p>Enter the time and date when you would like to know where the ISS is going to be.</p>
+	<p>Select the time when you would like to know where the ISS is going to be.</p>
 	</div>
 <!--
 	<div>
@@ -27,7 +27,32 @@
 					<br>
 		</form>
 -->
+
+	<div>	
+		<label>Select a time:</label>
+	  	<select name="userTime" id="userTime">
+	  		<option value=0>Now</option>
+	  		<option value=1>92 minutes</option>
+	  		<option value=2>3:04 hours</option>
+	  		<option value=3>4:36 hours</option>
+	  		<option value=4>6:08 hours</option>
+	  		<option value=5>7:40 hours</option>
+	  		<option value=6>9:12 hours</option>
+	  		<option value=7>10:44 hours</option>
+	  		<option value=8>12:16 hours</option>
+	  		<option value=9>13:48 hours</option>
+	  		<option value=10>15:50 hours</option>
+	  		<option value=11>16:52 hours</option>
+	  		<option value=12>18:24 hours</option>
+	 		<option value=13>19:56 hours</option>
+	  		<option value=14>21:28 hours</option>
+	  		<option value=15>23:00 hours</option>
+	  		<option value=16>24:30 hours</option>
+	  	</select>
+	  	<button onclick="userTime()">Calculate</button>
+	  	<br><br>
 	</div>
+<!--
 	<div>
 		<label>Time</label>
 		  	<input type="time" name="Time">
@@ -35,6 +60,7 @@
 		  <br>
 	  	<input type="submit" name="submit" value="Calculate">
 	</div>
+-->
 
 	<br>
 
@@ -89,6 +115,12 @@
   	<br>
 	
 	<div id="mapid"></div>	
+
+	<br>
+
+	<button type="button" onclick="loadDoc()">ISS Data</button>
+
+	<p id="demo">Change me</p>
 
 	<script src="script.js"></script>
 
